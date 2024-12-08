@@ -22,3 +22,24 @@ def part_one():
 
     return distance
 
+
+def find_number_in_list(number, second_list):
+    occurrences = 0
+    for i in second_list:
+        if (number == i):
+            occurrences += 1
+
+    return occurrences
+
+
+def part_two():
+    list_one, list_two = read_input()
+
+    similarity_idx = 0
+    for i in list_one:
+        similarity_idx += i * find_number_in_list(i, list_two)
+
+    return similarity_idx
+
+print("Result part one", part_one())
+print("Result part two", part_two())
