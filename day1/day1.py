@@ -13,10 +13,12 @@ def read_input():
 
     return sorted_one, sorted_two
 
-list_one, list_two = read_input()
-distance = 0
+def part_one():
+    list_one, list_two = read_input()
+    distance = 0
 
-for i, j in zip(list_one, list_two):
-    distance += abs(i-j)
+    for i, j in zip(list_one, list_two):
+        distance += abs(i-j)
 
-print(distance)
+    return distance
+
